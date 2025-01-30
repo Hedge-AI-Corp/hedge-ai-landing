@@ -61,7 +61,9 @@ export default function Navbar() {
   const links = [
     { name: "Features", hash: "/features", dropdownItems: features },
     { name: "Resources", hash: "/resources", dropdownItems: resources },
-    { name: "Invest", hash: "/investor-contact" },
+    { name: "FAQ", hash: "/faq" },
+    { name: "Investments", hash: "/investments" },
+    { name: "About Us", hash: "/about" },
     { name: "Contact", hash: "/contact" },
   ];
 
@@ -93,6 +95,7 @@ export default function Navbar() {
     </motion.div>
   );
 
+
   return (
     <header className="top-0 left-0 right-0 backdrop-blur-md border-b bg-slate-950 border-gray-800 z-50">
       <nav className="flex items-center justify-between max-w-7xl mx-auto px-8 h-16">
@@ -105,7 +108,7 @@ export default function Navbar() {
             height={32}
             className="rounded-full"
           />
-          <span className="font-semibold text-xl text-white font-clashgrotesk">Hedge AI</span>
+          <span className="font-medium text-xl text-white font-clash">Hedge AI</span>
         </Link>
 
         {/* Navigation Links */}

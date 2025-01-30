@@ -12,7 +12,7 @@ export default {
 		fontFamily: {
 			inter: ["var(--font-inter)", "sans-serif"],
 			dmsans: ["var(--font-dmsans)", "sans-serif"], 
-			clashgrotesk: ["var(--font-dmsans)", "serif"]
+			clash: ["var(--font-clashgrotesk)", "sans-serif"]
 		},
   		colors: {
   			background: 'hsl(var(--background))',
@@ -60,7 +60,18 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		  animation: {
+			'spin-slow': 'spin 8s linear infinite',
+			'spin-reverse-slow': 'spin-reverse 8s linear infinite',
+			'shine': 'shine 3s infinite linear',
+		  },
+		  keyframes: {
+			'spin-reverse': {
+			  from: { transform: 'rotate(360deg)' },
+			  to: { transform: 'rotate(0deg)' },
+			},
+		  },
   	}
   },
   plugins: [require("tailwindcss-animate")],
