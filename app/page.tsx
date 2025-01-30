@@ -1,6 +1,7 @@
 import StockPrice from "@/components/Landing/StockPrice";
 import BlogCard from "@/components/Landing/BlogCard"
 import Banner from "@/components/Landing/Banner";
+import Link from "next/link";
 
 export default async function Home() {
 
@@ -21,6 +22,8 @@ export default async function Home() {
     </div>
     <p>Resources</p>
       <BlogCard />
+    <Link href="/terms-of-service"><p className="underline-offset-1 text-blue-500">Terms of Service</p></Link>
+    <Link href="/privacy-policy"><p className="underline-offset-1 text-blue-500">Privacy Policy</p></Link>
     </div>
   )
 }
