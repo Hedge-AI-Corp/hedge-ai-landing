@@ -3,6 +3,7 @@ import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
 import localFont from "next/font/local";
 import { Inter, DM_Sans } from "next/font/google";
+import Providers from "./providers";
 
 const clashGrotesk = localFont({
   src: "../public/fonts/clash-grotesk.woff2",
@@ -33,7 +34,9 @@ export default function RootLayout({
       <body
         className={clashGrotesk.className}
       >
+        <Providers>
         {children}
+        </Providers>
         <Analytics />
       </body>
     </html>
