@@ -19,12 +19,14 @@ export default function StockPrice({ ticker }: StockPriceProps) {
       if (!response.ok) throw new Error('Network response was not ok');
       return response.json();
     },
-    // Add these options
-    staleTime: 60000, // Data considered fresh for 1 minute
-    cacheTime: 3600000, // Cache persists for 1 hour
-    refetchOnWindowFocus: false, // Prevent refetch on window focus
-    refetchOnReconnect: false, // Prevent refetch on reconnect
-    refetchOnMount: false // Prevent refetch on component mount
+    // Updated options
+    staleTime: 3600000, // Consider data fresh for 1 hour
+    gcTime: 24 * 3600000, // Keep unused data in cache for 24 hours
+    refetchOnWindowFocus: false,
+    refetchOnReconnect: false,
+    refetchOnMount: false,
+    retry: false // Don't retry on failure
+  
   });
 
   const priceChange = data?.results?.[0]?.c - data?.results?.[0]?.o;

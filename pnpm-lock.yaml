@@ -15,7 +15,7 @@ importers:
         specifier: ^3.5.7
         version: 3.5.7(react@19.0.0)
       '@sanity/image-url':
-        specifier: '1'
+        specifier: ^1.1.0
         version: 1.1.0
       '@sanity/vision':
         specifier: '3'
@@ -42,8 +42,11 @@ importers:
         specifier: 15.1.6
         version: 15.1.6(@babel/core@7.26.7)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       next-sanity:
-        specifier: '9'
+        specifier: ^9.8.46
         version: 9.8.46(@sanity/client@6.27.2)(@sanity/icons@3.5.7(react@19.0.0))(@sanity/types@3.72.1(@types/react@19.0.8))(@sanity/ui@2.11.7(@emotion/is-prop-valid@1.2.2)(react-dom@19.0.0(react@19.0.0))(react-is@18.3.1)(react@19.0.0)(styled-components@6.1.14(react-dom@19.0.0(react@19.0.0))(react@19.0.0)))(next@15.1.6(@babel/core@7.26.7)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sanity@3.72.1(@emotion/is-prop-valid@1.2.2)(@types/babel__core@7.20.5)(@types/node@20.17.16)(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(styled-components@6.1.14(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(terser@5.37.0)(typescript@5.7.3))(styled-components@6.1.14(react-dom@19.0.0(react@19.0.0))(react@19.0.0))
+      next-sanity-image:
+        specifier: ^6.1.1
+        version: 6.1.1(@sanity/client@6.27.2)(next@15.1.6(@babel/core@7.26.7)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -54,7 +57,7 @@ importers:
         specifier: ^4.1.1
         version: 4.1.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       sanity:
-        specifier: '3'
+        specifier: ^3.72.1
         version: 3.72.1(@emotion/is-prop-valid@1.2.2)(@types/babel__core@7.20.5)(@types/node@20.17.16)(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(styled-components@6.1.14(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(terser@5.37.0)(typescript@5.7.3)
       styled-components:
         specifier: '6'
@@ -4207,6 +4210,13 @@ packages:
 
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
+
+  next-sanity-image@6.1.1:
+    resolution: {integrity: sha512-mLRiatJW3TZoD3VlUCci4lOxW9lKOl0bxDsYtk/JRqKZo25QJqPXNV7aoD+lmjEFf6RO2eW7uJ57QeI20mPhOA==}
+    peerDependencies:
+      '@sanity/client': ^5.0.0 || ^6.0.0
+      next: ^13.0.0 || ^14.0.0
+      react: ^18.0.0
 
   next-sanity@9.8.46:
     resolution: {integrity: sha512-ITvILclr3eGFhyFm8ymnMvRtyrfZu3T/E2oiOp7H6QunnhP8ttv5QoNXLmep6lb7VUevQBrcjUCeZ1aarWAldQ==}
@@ -10448,6 +10458,13 @@ snapshots:
   nanoid@5.0.9: {}
 
   natural-compare@1.4.0: {}
+
+  next-sanity-image@6.1.1(@sanity/client@6.27.2)(next@15.1.6(@babel/core@7.26.7)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0):
+    dependencies:
+      '@sanity/client': 6.27.2(debug@4.4.0)
+      '@sanity/image-url': 1.1.0
+      next: 15.1.6(@babel/core@7.26.7)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react: 19.0.0
 
   next-sanity@9.8.46(@sanity/client@6.27.2)(@sanity/icons@3.5.7(react@19.0.0))(@sanity/types@3.72.1(@types/react@19.0.8))(@sanity/ui@2.11.7(@emotion/is-prop-valid@1.2.2)(react-dom@19.0.0(react@19.0.0))(react-is@18.3.1)(react@19.0.0)(styled-components@6.1.14(react-dom@19.0.0(react@19.0.0))(react@19.0.0)))(next@15.1.6(@babel/core@7.26.7)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sanity@3.72.1(@emotion/is-prop-valid@1.2.2)(@types/babel__core@7.20.5)(@types/node@20.17.16)(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(styled-components@6.1.14(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(terser@5.37.0)(typescript@5.7.3))(styled-components@6.1.14(react-dom@19.0.0(react@19.0.0))(react@19.0.0)):
     dependencies:
