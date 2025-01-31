@@ -8,6 +8,7 @@ import Providers from "./providers";
 import Navbar from "@/components/Landing/Navbar";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import Banner from "@/components/Landing/Banner";
+import Footer from "@/components/Landing/Footer";
 
 const clashgrotesk = localFont({
   src: "../public/fonts/clash-grotesk.woff2",
@@ -45,9 +46,10 @@ export default function RootLayout({
         <Providers>
         <Banner />
         <Navbar />
-        <main className="mt-18">
+        <main className="mt-18 mb-18">
         {children}
         </main>
+        <Footer />
         </Providers>
         <Analytics />
         </ActiveSectionContextProvider>
