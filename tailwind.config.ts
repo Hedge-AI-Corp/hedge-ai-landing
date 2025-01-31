@@ -11,6 +11,7 @@ export default {
   	extend: {
 		fontFamily: {
 			clash: ['Clash Grotesk', 'sans-serif'],
+			inter: ["Inter", 'sans-serif'],
 		},
   		colors: {
   			background: 'hsl(var(--background))',

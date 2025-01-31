@@ -1,10 +1,12 @@
 import StockPrice from "@/components/Landing/StockPrice";
 import BlogCard from "@/components/Landing/BlogCard"
+import Banner from "@/components/Landing/Banner";
 
 export default async function Home() {
 
   return (
     <div>
+    <Banner />
     <div className="text-2xl">
       Hedge AI Landing Page
     </div>
