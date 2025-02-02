@@ -5,6 +5,8 @@ import "./globals.css";
 import localFont from "next/font/local";
 import { Inter, DM_Sans } from "next/font/google";
 import Providers from "./providers";
+import Navbar from "@/components/Landing/Navbar";
+import ActiveSectionContextProvider from "@/context/active-section-context";
 
 const clashGrotesk = localFont({
   src: "../public/fonts/clash-grotesk.woff2",
@@ -33,12 +35,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={clashGrotesk.className}
+        className={inter.className}
       >
+        <ActiveSectionContextProvider>
         <Providers>
+        <Navbar />
         {children}
         </Providers>
         <Analytics />
+        </ActiveSectionContextProvider>
       </body>
     </html>
   );
