@@ -24,6 +24,9 @@ export default async function Home() {
       <BlogCard />
     <Link href="/terms-of-service"><p className="underline-offset-1 text-blue-500">Terms of Service</p></Link>
     <Link href="/privacy-policy"><p className="underline-offset-1 text-blue-500">Privacy Policy</p></Link>
+    <div>
+      <Link href="/investor-contact">Investor Form</Link>
+    </div>
     </div>
   )
 }

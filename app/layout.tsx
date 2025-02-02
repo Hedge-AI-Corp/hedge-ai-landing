@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
@@ -15,7 +16,7 @@ const inter = Inter({
   subsets: ["latin"],
 })
 
-const dmSans = DM_Sans({
+const dmsans = DM_Sans({
   subsets: ["latin"],
 }) 
 
