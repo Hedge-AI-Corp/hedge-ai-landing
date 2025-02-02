@@ -65,7 +65,7 @@ export default function Navbar() {
     { name: "Contact", hash: "/contact" },
   ];
 
-  const Dropdown = ({ items }) => (
+  const Dropdown = ({ items }: { items: any }) => (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
@@ -74,7 +74,7 @@ export default function Navbar() {
       className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-80 bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-lg border border-gray-700 overflow-hidden"
     >
       <div className="grid grid-cols-1 gap-2 p-4">
-        {items.map((item) => (
+        {items.map((item: any) => (
           <motion.div
             key={item.name}
             whileHover={{ x: 4 }}
@@ -94,7 +94,7 @@ export default function Navbar() {
   );
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-black/90 backdrop-blur-md border-b border-gray-800 z-50">
+    <header className="top-0 left-0 right-0 backdrop-blur-md border-b bg-slate-950 border-gray-800 z-50">
       <nav className="flex items-center justify-between max-w-7xl mx-auto px-8 h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
@@ -105,7 +105,7 @@ export default function Navbar() {
             height={32}
             className="rounded-full"
           />
-          <span className="font-semibold text-xl text-white">Hedge AI</span>
+          <span className="font-semibold text-xl text-white font-clashgrotesk">Hedge AI</span>
         </Link>
 
         {/* Navigation Links */}

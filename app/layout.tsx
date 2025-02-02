@@ -7,19 +7,23 @@ import { Inter, DM_Sans } from "next/font/google";
 import Providers from "./providers";
 import Navbar from "@/components/Landing/Navbar";
 import ActiveSectionContextProvider from "@/context/active-section-context";
+import Banner from "@/components/Landing/Banner";
 
-const clashGrotesk = localFont({
+const clashgrotesk = localFont({
   src: "../public/fonts/clash-grotesk.woff2",
   style: "normal",
   display: "swap",
+  variable: "--font-clashgrotesk"
 });
 
 const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter"
 })
 
 const dmsans = DM_Sans({
   subsets: ["latin"],
+  variable: "--font-dmsans"
 }) 
 
 export const metadata: Metadata = {
@@ -33,14 +37,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${dmsans.variable} ${clashgrotesk.variable} dark`}>
       <body
-        className={inter.className}
+        className="font-inter bg-slate-950 min-h-screen"
       >
         <ActiveSectionContextProvider>
         <Providers>
+        <Banner />
         <Navbar />
+        <main className="mt-18">
         {children}
+        </main>
         </Providers>
         <Analytics />
         </ActiveSectionContextProvider>

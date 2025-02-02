@@ -13,24 +13,7 @@ export default function Banner() {
               We&apos;ve just agreed to receive $1.5M from Deepseek and OpenAI.
             </p>
             
-            <Button
-              variant="secondary"
-              size="sm"
-              className="bg-white hover:bg-white/90 text-blue-600"
-            >
-              Learn More
-              <span className="ml-2" aria-hidden="true">→</span>
-            </Button>
           </AlertDescription>
-
-          <Button
-            variant="ghost"
-            size="icon"
-            className="absolute right-0 hover:bg-blue-500/20 text-white"
-            aria-label="Dismiss"
-          >
-            <X className="h-4 w-4" />
-          </Button>
         </div>
       </div>
     </Alert>

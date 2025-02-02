@@ -10,9 +10,9 @@ export default {
   theme: {
   	extend: {
 		fontFamily: {
-			clash: ['Clash_Grotesk', 'sans-serif'],
-			inter: ["Inter", 'sans-serif'],
-			dmsans: ["DM_Sans", 'sans-serif'],
+			inter: ["var(--font-inter)", "sans-serif"],
+			dmsans: ["var(--font-dmsans)", "sans-serif"], 
+			clashgrotesk: ["var(--font-dmsans)", "serif"]
 		},
   		colors: {
   			background: 'hsl(var(--background))',
