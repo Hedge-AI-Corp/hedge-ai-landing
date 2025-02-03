@@ -1,21 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import { 
-  ChartLine, 
-  Bot, 
-  LineChart, 
-  Timer,
+import { AnimatePresence, motion } from "framer-motion";
+import {
   BookOpen,
-  Video,
+  Bot,
+  ChartLine,
+  LineChart,
   Newspaper,
-  Podcast
+  Timer
 } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 const features = [
   {

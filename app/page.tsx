@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import Footer from "@/components/Landing/Footer";
 import Image from 'next/image';
 
 const companyLogos = [
@@ -265,6 +266,7 @@ useEffect(() => {
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent" />
         </motion.div>
       </motion.div>
+      <Footer />
     </div>
   );
 }
