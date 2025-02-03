@@ -1,32 +1,39 @@
-import StockPrice from "@/components/Landing/StockPrice";
-import BlogCard from "@/components/Landing/BlogCard"
-import Banner from "@/components/Landing/Banner";
+// import Banner from "@/components/Landing/Banner";
 import Link from "next/link";
+import NavbarMenu from "@/components/navbar";
+import Image from "next/image";
+import HedgeAiIcon from "@/public/file.svg";
+import { Button } from "@/components/ui/button";
+import Hero from "@/components/Landing/Hero/Hero";
 
 export default async function Home() {
-
   return (
-    <div>
-    <Banner />
-    <div className="text-2xl">
-      Hedge AI Landing Page
+    <div className="relative w-full h-screen  overflow-y-scroll z-0">
+      {/* <Banner /> */}
+
+      {/* Added a new navbar with your specifications. Let me know what you think */}
+      <div className="flex items-center justify-evenly h-16 sticky top-0 z-50 bg-gray-800">
+        {/* Nav Icon */}
+        <Link href="/" className="flex items-center space-x-4">
+          <Image
+            src={HedgeAiIcon}
+            alt="Hedge Ai Icon"
+            height={40}
+            width={40}
+            className="object-cover rounded-full"
+          />
+          <h3 className="text-xl text-white">Hedge AI</h3>
+        </Link>
+
+        {/* Nav Menu with Dropdowns */}
+        <NavbarMenu />
+
+        {/* Links */}
+        <Button variant="default">Join the Waitlist</Button>
+      </div>
+
+      {/* Hero */}
+      <Hero />
     </div>
-    <div>
-      Today's Stocks
-    <div className="grid grid-cols-3">
-    <StockPrice ticker="NVDA" />
-    <StockPrice ticker="GOOGL" />
-    <StockPrice ticker="TSLA" />
-    <StockPrice ticker="AAPL" />
-    </div>
-    </div>
-    <p>Resources</p>
-      <BlogCard />
-    <Link href="/terms-of-service"><p className="underline-offset-1 text-blue-500">Terms of Service</p></Link>
-    <Link href="/privacy-policy"><p className="underline-offset-1 text-blue-500">Privacy Policy</p></Link>
-    <div>
-      <Link href="/investor-contact">Investor Form</Link>
-    </div>
-    </div>
-  )
+  );
 }
