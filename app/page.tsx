@@ -80,7 +80,8 @@ useEffect(() => {
 }, []);
 
   return (
-    <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-start relative overflow-hidden pt-5">
+    <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-start relative overflow-hidden pt-5 pb-12">
+      <div>
         <div className="absolute top-20 -left-40">
     <Blob />
   </div>
@@ -266,7 +267,7 @@ useEffect(() => {
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent" />
         </motion.div>
       </motion.div>
-      <Footer />
+    </div>
     </div>
   );
 }
